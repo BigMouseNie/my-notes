@@ -20,8 +20,10 @@
 // 示例
 feat(network): 添加异步连接池支持
 
-实现了基于 epoll 的异步连接池，支持连接复用与最大连接限制
-同时修复了连接泄漏的 bug
+- Added ProcessWrapper class in run module to encapsulate child process logic
+- Implemented Epoller, Acceptor, and SocketWrapper` classes in network module for basic network handling
+- Created RingBuffer class in container module for efficient data buffering
+- Note: Some classes are partially implemented and have only undergone basic testing
 
 BREAKING CHANGE: 修改了原有 connect() 接口参数
 Closes #123
@@ -32,7 +34,7 @@ Closes #123
 | **type**    | 变更类型（见下方）                                           |
 | **scope**   | 可选：模块、目录、功能范围                                   |
 | **summary** | 50 字以内简要说明改动内容（首字母小写、无句号）              |
-| **details** | 可选：更详细的描述，说明背景、实现思路、动机等               |
+| **details** | 可选：更详细的描述，说明背景、实现思路、动机等(用“-”分隔，首字母大写，无句号) |
 | **footer**  | 可选：breaking change(破坏性变更,标记这次提交引入了不兼容的更改)、issue(Close、Fixes、Related to) 关联等元信息 |
 |             |                                                              |
 
