@@ -163,7 +163,13 @@ sequenceDiagram
     participant C as 客户端
     participant S as 服务端
     participant DB as 数据库
-
+	
+    alt 登录成功
+    	B-->>A: 返回成功信息
+    else 登录失败
+        B-->>A: 返回错误信息
+    end
+	
     %% 同步、异步调用
     U->>C: 打开应用
     C->>+S: 登录请求（用户名/密码）
