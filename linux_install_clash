@@ -13,6 +13,8 @@ sudo mv mihomo-linux-amd64 /usr/local/bin/clash
 
 clash
 
-# 网页可配置 http://yacd.haishan.me/
+# 网页可配置 http://yacd.haishan.me/ , 但是记得更改一下config.yaml
+# external-controller: 127.0.0.1:9090
+
 # 别忘了手动配置系统代理 127.0.0.1:7890
 
