@@ -1,0 +1,18 @@
+https://github.com/MetaCubeX/mihomo
+
+download: mihomo-linux-amd64.gz
+
+gunzip mihomo-linux-amd64.gz
+
+sudo mv mihomo-linux-amd64 /usr/local/bin/clash
+
+# 配置config.yaml (~/.config/mihomo/config.yaml)，需要机场提供
+# 并且需要下载(也是放在~/.config/mihomo下)
+# geosite.metadb(https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb)
+# geosite.dat(https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat)
+
+clash
+
+# 网页可配置 http://yacd.haishan.me/
+# 别忘了手动配置系统代理 127.0.0.1:7890
+
