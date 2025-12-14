@@ -1,7 +1,6 @@
-sudo apt-get install fcitx fcitx-config-gtk fcitx-frontend-all fcitx-pinyin fcitx-table-all
-restart
-config right-top
-sudo apt-get install fcitx-googlepinyin
-
-switch key : ctrl-space
+sudo apt install fcitx5 fcitx5-chinese-addons fcitx5-config-qt im-config
+im-config -n fcitx5
+# 重启系统
+# 点击右上角的键盘，进入配置，加入pinyin输入法即可
+# 最好不要使用fcitx(fcitx4),会有兼容性问题，比如ubuntu22.04下的chrome会切换不了
 
