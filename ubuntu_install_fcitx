@@ -1,0 +1,7 @@
+sudo apt-get install fcitx fcitx-config-gtk fcitx-frontend-all fcitx-pinyin fcitx-table-all
+restart
+config right-top
+sudo apt-get install fcitx-googlepinyin
+
+switch key : ctrl-space
+
