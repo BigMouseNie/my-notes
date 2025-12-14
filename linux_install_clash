@@ -18,3 +18,44 @@ clash
 
 # 别忘了手动配置系统代理 127.0.0.1:7890
 
+# 但是这样需要一直开着这个终端，可以用服务的方式
+sudo mv mihomo-linux-amd64 /usr/local/bin/clash
+sudo vim /etc/systemd/system/clash.service
+# 粘贴下面的内容
+[Unit]
+Description=Clash daemon
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/usr/local/bin/clash -d /etc/clash
+Restart=on-failure
+RestartSec=5s
+LimitNOFILE=infinity
+
+[Install]
+WantedBy=multi-user.target
+
+# 将 config.yaml geosite.metadb geosite.dat 拷贝到 /etc/clash
+
+# 重新加载
+sudo systemctl daemon-reload
+
+# 设置开机自启
+sudo systemctl enable clash
+
+# 启动服务
+sudo systemctl start clash
+
+# 查看状态
+sudo systemctl status clash
+
+# 重新启动
+sudo systemctl restart clash
+
+
+
+
+
